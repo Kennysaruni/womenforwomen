@@ -10,6 +10,8 @@ import {
 import {
   ABOUT_CONTENT,
   ORGANIZATIONAL_GOALS,
+  AUTHENTIC_GOALS_LIST,
+  AUTHENTIC_OTHER_OBJECTIVES_LIST,
   FACILITATOR_INFO,
 } from '../data/content';
 import { FadeUp, StaggerContainer, StaggerItem, ScaleReveal, HoverLift } from '../components/MotionReveal';
@@ -295,7 +297,78 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Judith Kerr Leadership Profile */}
+      {/* 5. Complete Strategic Goals & Community Objectives Charter */}
+      <section className="py-16 sm:py-24 bg-white border-b border-[#F3D5E2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <FadeUp yOffset={20}>
+            <div className="max-w-3xl text-left space-y-3">
+              <div className="eyebrow-accent">
+                <span>Action Mandate</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#4A1525] font-semibold">
+                Strategic Goals & Core Objectives
+              </h2>
+              <p className="text-sm sm:text-base text-[#575757]">
+                The complete guiding charter of Women FE Woman, establishing our standards for advocacy, education, economic empowerment, and community care.
+              </p>
+            </div>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left: Goals */}
+            <FadeUp delay={0.1} yOffset={20}>
+              <div className="bg-[#FAF4F7] border border-[#E7BDD1] p-6 sm:p-8 space-y-6 text-left">
+                <div className="flex items-center justify-between pb-3 border-b border-[#F3D5E2]">
+                  <h3 className="text-xl font-serif font-bold text-[#4A1525]">
+                    Organizational Goals
+                  </h3>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#D81B60] font-bold">
+                    10 Strategic Aims
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  {AUTHENTIC_GOALS_LIST.map((goal, idx) => (
+                    <div key={idx} className="flex items-start gap-3 bg-white p-3.5 border border-[#E7BDD1] hover:border-[#D81B60] transition-colors">
+                      <span className="w-2 h-2 rounded-full bg-[#D81B60] shrink-0 mt-1.5" />
+                      <span className="text-xs sm:text-sm text-[#333333] leading-relaxed">
+                        {goal}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeUp>
+
+            {/* Right: Other Objectives */}
+            <FadeUp delay={0.2} yOffset={20}>
+              <div className="bg-[#FAF4F7] border border-[#E7BDD1] p-6 sm:p-8 space-y-6 text-left">
+                <div className="flex items-center justify-between pb-3 border-b border-[#F3D5E2]">
+                  <h3 className="text-xl font-serif font-bold text-[#4A1525]">
+                    Key Community Objectives
+                  </h3>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#D81B60] font-bold">
+                    09 Directives
+                  </span>
+                </div>
+                <div className="space-y-3">
+                  {AUTHENTIC_OTHER_OBJECTIVES_LIST.map((obj, idx) => (
+                    <div key={idx} className="flex items-start gap-3 bg-white p-3.5 border border-[#E7BDD1] hover:border-[#D81B60] transition-colors">
+                      <span className="text-xs font-mono font-bold text-[#D81B60] shrink-0 mt-0.5">
+                        {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}.
+                      </span>
+                      <span className="text-xs sm:text-sm text-[#333333] leading-relaxed">
+                        {obj}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Judith Kerr Leadership Profile */}
       <section className="py-16 sm:py-24 bg-[#FAF4F7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-[#E7BDD1] overflow-hidden shadow-sm">

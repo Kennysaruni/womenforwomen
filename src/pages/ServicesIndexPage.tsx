@@ -33,7 +33,7 @@ export const ServicesIndexPage: React.FC = () => {
           </FadeUp>
           <FadeUp delay={0.2} yOffset={20}>
             <p className="text-base sm:text-lg text-[#F8EAF0] max-w-2xl font-light">
-              Targeted, free, and completely confidential initiatives designed to uplift, equip, and champion women through every phase of personal and professional transition.
+              To provide services, supports, and direction to women to meet their goals, desires, dreams and purposes in life. We aim to empower women to recognize their own self-worth, through self-knowledge both individually and collectively.
             </p>
           </FadeUp>
         </div>

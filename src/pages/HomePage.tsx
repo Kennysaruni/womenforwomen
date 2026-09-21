@@ -25,7 +25,7 @@ export const HomePage: React.FC = () => {
 
               <FadeUp delay={0.1} yOffset={20}>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#4A1525] tracking-tight leading-[1.12]">
-                  Some People Dream of Success.{' '}
+                  Some People Dream of Fulfilment...{' '}
                   <span className="text-[#D81B60] italic block font-normal mt-2">
                     We Make It Happen.
                   </span>
@@ -34,7 +34,7 @@ export const HomePage: React.FC = () => {
 
               <FadeUp delay={0.2} yOffset={20}>
                 <p className="text-base sm:text-lg text-[#575757] max-w-2xl leading-relaxed font-normal">
-                  Empowering women and marginalized communities to recognize self-worth through collective energy, equity, and sustainable self-reliance.
+                  Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective.
                 </p>
               </FadeUp>
 
@@ -129,7 +129,7 @@ export const HomePage: React.FC = () => {
                 {CORE_PHILOSOPHY.acronym} — {CORE_PHILOSOPHY.fullName}
               </span>
               <blockquote className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#4A1525] font-normal leading-snug max-w-3xl mx-auto">
-                "{CORE_PHILOSOPHY.quote}"
+                "{CORE_PHILOSOPHY.quoteUppercase}"
               </blockquote>
               <p className="text-xs sm:text-sm text-[#575757] uppercase tracking-wider">
                 — {CORE_PHILOSOPHY.attribution}
@@ -138,8 +138,8 @@ export const HomePage: React.FC = () => {
           </FadeUp>
 
           <FadeUp delay={0.2} yOffset={20}>
-            <p className="text-sm sm:text-base text-[#404040] max-w-2xl mx-auto leading-relaxed">
-              {CORE_PHILOSOPHY.summary} Our gatherings are grounded in unconditional acceptance, mutual encouragement, and actionable pathways out of isolation.
+            <p className="text-sm sm:text-base text-[#404040] max-w-3xl mx-auto leading-relaxed">
+              There is more than sufficient for everyone and if we assist others to realize their dreams and successes it naturally flows back to us.
             </p>
           </FadeUp>
 
@@ -156,13 +156,13 @@ export const HomePage: React.FC = () => {
           <FadeUp yOffset={20}>
             <div className="max-w-3xl space-y-3 text-left">
               <div className="eyebrow-accent">
-                <span>Strategic Foundations</span>
+                <span>Core Mandate</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#4A1525] font-semibold">
-                Primary Objectives: The Four Pillars
+                Primary Objectives: Raising the Standard of Life
               </h2>
               <p className="text-sm sm:text-base text-[#575757] leading-relaxed">
-                Every initiative at Women FE Woman stems from four core commitments designed to transition community members from survival into enduring sovereignty.
+                To raise the standard of life for women and their communities through: Information Sharing and Awareness, Community Support, Accessibility, and Financial Management.
               </p>
             </div>
           </FadeUp>

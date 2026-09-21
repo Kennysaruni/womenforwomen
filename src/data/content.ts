@@ -12,7 +12,7 @@ export const FACILITATOR_INFO: FacilitatorContact = {
   phoneRaw: '+14169183177',
   email: 'Judith.kerr@alumni.utoronto.ca',
   location: 'Scarborough / Greater Toronto Area & Global Virtual Outreach',
-  bio: 'Dedicated community builder, advocate, and founder of Women FE Woman. Judith has spent decades connecting marginalized women to life-transforming institutional resources, advocacy networks, and structured community care.',
+  bio: 'Dedicated community builder, advocate, and founder of Women FE Woman. Judith Kerr has spent decades connecting marginalized women to life-transforming institutional resources, advocacy networks, and structured community care.',
   image: '/judith-portrait.jpg',
 };
 
@@ -24,9 +24,9 @@ export const UPCOMING_MEETING = {
   format: 'Hybrid — In-Person (Scarborough Hub) & Secure Zoom Link',
   agenda: [
     'Opening Circle & Collective Reflection',
-    'Financial Stability Workshop: Navigating Living Costs & Resource Maps',
-    'Career Advisory Clinic: Resume Refinements & Interview Mindset',
-    'Open Advocacy Forum: Community Resources & Legal Rights',
+    'Financial Stability Workshop: Budgeting Planning & Expense Tracking',
+    'Career Advisory Clinic: Resume Refinements, Cover Letters & Mock Interviews',
+    'Open Advocacy Forum: Community Resources & Upholding Women’s Rights',
   ],
   facilitator: FACILITATOR_INFO,
 };
@@ -34,409 +34,421 @@ export const UPCOMING_MEETING = {
 export const CORE_PHILOSOPHY = {
   acronym: 'T.E.A.M.',
   fullName: 'Together Each Achieve More',
+  slogan: 'Some people dream of fulfilment... We make it happen.',
   quote: 'We experience happiness when we make others happy.',
+  quoteUppercase: '...WE EXPERIENCE HAPPINESS WHEN WE MAKE OTHERS HAPPY...',
   attribution: 'Judith Kerr, Founder of Women FE Woman',
   summary:
-    'Our foundation rests on the time-tested law of synergetic action: when women unite with shared purpose, what seems insurmountable to one becomes achievable to all.',
+    'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective. (Together Each Achieve More). There is more than sufficient for everyone and if we assist others to realize their dreams and successes it naturally flows back to us.',
 };
 
 export const PRIMARY_PILLARS: ObjectivePillar[] = [
   {
     id: 'pillar-1',
     number: '01',
-    title: 'Information Sharing & Awareness',
+    title: 'Information Sharing and Awareness',
     description:
-      'Demystifying complex civic systems and disseminating critical resources directly to community members who need them most.',
+      'Raising the standard of life through active dissemination of essential community information, circulars, educational articles, and civic awareness.',
     offerings: [
-      'Multi-lingual resource toolkits & rights guides',
-      'Civic services navigational briefings',
-      'Regular community bulletins and workshop alerts',
+      'Locating community resources to meet pressing individual and family needs',
+      'Publishing and distributing informative circulars and educational articles',
+      'Dispelling media misconceptions and stereotypes through critical awareness',
     ],
   },
   {
     id: 'pillar-2',
     number: '02',
-    title: 'Community Support & Safe Spaces',
+    title: 'Community Support',
     description:
-      'Providing non-judgmental, compassionate safe harbors where women can speak candidly, unpack challenges, and be embraced.',
+      'Fostering togetherness, deep belonging, and mutual encouragement where women can be real, be heard, and grow in a relaxed setting.',
     offerings: [
-      'Facilitated monthly listening & empowerment circles',
-      'Confidential peer guidance and trauma-informed support',
-      'Lifelong intergenerational sisterhood networks',
+      'Safe, supportive group gatherings for goal-setting and achieving dreams',
+      'Mentoring and networking programs connecting women of similar life experiences',
+      'Building strong community foundations and creating lifelong friendships',
     ],
   },
   {
     id: 'pillar-3',
     number: '03',
-    title: 'Accessibility & Direct Advocacy',
+    title: 'Accessibility',
     description:
-      'Standing shoulder-to-shoulder with women to bridge institutional gaps, cut red tape, and demand equitable treatment.',
+      'Ensuring women have direct access to institutional services, government agency advocacy, letter writing, and legal human rights defense.',
     offerings: [
-      'Direct liaison with provincial and municipal agencies',
-      'Housing, healthcare, and immigration case navigation',
-      'Dispelling media biases and societal stereotypes',
+      'Adequate referrals and casework advocacy to community and governmental agencies',
+      'Administrative assistance for letters, resumes, and formal documentation',
+      'Courageous advocacy speaking out against human rights violations',
     ],
   },
   {
     id: 'pillar-4',
     number: '04',
-    title: 'Financial Literacy & Management',
+    title: 'Financial Management',
     description:
-      'Equipping women with concrete financial tools, budgeting discipline, debt relief strategies, and pathways to self-reliance.',
+      'Providing practical financial planning, budgeting discipline, debt resolution, and expense tracking to build enduring economic independence.',
     offerings: [
-      'Practical monthly budget blueprinting',
-      'Credit rebuilding & debt restructuring advisory',
-      'Micro-enterprise and emergency savings education',
-    ],
-  },
-];
-
-export const SERVICES_DATA: ServiceItem[] = [
-  {
-    id: 'advocacy-referrals',
-    slug: 'advocacy-referrals',
-    title: 'Community Advocacy & Government Agency Referrals',
-    navTitle: 'Advocacy & Referrals',
-    shortDescription:
-      'Bridging women to vital municipal, provincial, and community institutions with direct casework advocacy.',
-    fullDescription:
-      'Navigating government bureaucracy, social services, and legal frameworks can be overwhelming and intimidating—especially for newcomers, single mothers, and survivors. Women FE Woman acts as your trusted advocate, ensuring you are treated with dignity, your voice is heard, and you receive the full support you are entitled to.',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80',
-    quote: 'Advocacy is about turning institutional closed doors into open pathways of empowerment.',
-    impactMetrics: [
-      { value: '100%', label: 'Confidential Guidance' },
-      { value: '40+', label: 'Agency Partner Connections' },
-      { value: 'Direct', label: 'Liaison & Form Support' },
-    ],
-    offerings: [
-      'Locating vital local community resources including subsidized childcare, food security, and transitional shelter.',
-      'Adequate, verified referrals to authorized legal aid, settlement workers, and crisis counseling centers.',
-      'Direct case accompaniment and persistent follow-through with government agencies (Ontario Works, ODSP, Service Canada, CRA).',
-      'Confidential support navigation for women navigating family transitions or overcoming abusive environments.',
-    ],
-    outcomes: [
-      'Clear roadmap of your legal rights and available entitlements without bureaucratic confusion.',
-      'Reduction in administrative delays through professionally prepared agency submissions.',
-      'An empathetic companion by your side during critical institutional appointments and reviews.',
-    ],
-  },
-  {
-    id: 'financial-empowerment',
-    slug: 'financial-empowerment',
-    title: 'Financial Management & Economic Literacy',
-    navTitle: 'Financial Empowerment',
-    shortDescription:
-      'Equipping women with hands-on budgeting skills, debt resolution tools, and sustainable wealth-building habits.',
-    fullDescription:
-      'Financial independence is the bedrock of long-term freedom and self-worth. Our financial empowerment program breaks down complex money topics into practical, stress-free steps. Whether you are living paycheck-to-paycheck, rebuilding after hardship, or planning for your children’s future, we guide you toward lasting security.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
-    quote: 'True independence begins when you hold the tools to command your own financial future.',
-    impactMetrics: [
-      { value: 'Step-by-Step', label: 'Budget Methodologies' },
-      { value: 'Zero-Cost', label: 'Workshops & Clinics' },
-      { value: '1-on-1', label: 'Expense Tracking Plans' },
-    ],
-    offerings: [
-      'Comprehensive budget planning and expense tracking workshops tailored for fluctuating incomes.',
-      'Debt resolution consultations, credit score rebuilding, and negotiated repayment literacy.',
-      'Long-term security strategies, emergency fund establishment, and family protection awareness.',
-      'Introduction to small business micro-finance, grants, and community credit circles.',
-    ],
-    outcomes: [
-      'Mastery of your household cash flow and elimination of reactive stress.',
-      'A structured, actionable timeline to emerge from high-interest debt and rebuild creditworthiness.',
-      'Confidence to make informed banking, investment, and savings decisions for yourself and your children.',
-    ],
-  },
-  {
-    id: 'career-development',
-    slug: 'career-development',
-    title: 'Employment, Coaching & Administrative Support',
-    navTitle: 'Career & Employment',
-    shortDescription:
-      'Professional resume completion, mock interview coaching, and administrative support for official applications.',
-    fullDescription:
-      'Entering or re-entering the workforce requires more than just submitting applications—it requires strategic positioning, confidence, and polished administrative presentation. We partner with you to translate your life and work experiences into compelling resumes, prepare you for interviews, and assist with complex official documentation.',
-    image: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1200&q=80',
-    quote: 'Your past experience has undeniable value. We help the world recognize it.',
-    impactMetrics: [
-      { value: 'Custom', label: 'Targeted Resumes & Letters' },
-      { value: 'Live', label: 'Mock Interview Simulations' },
-      { value: 'Hands-On', label: 'Application Completion' },
-    ],
-    offerings: [
-      'Resume / CV drafting and overhaul formatted to Canadian corporate, non-profit, and public standards.',
-      'Official tailored cover letter writing highlighting transferable leadership and cross-cultural skills.',
-      'Job search strategies, targeted application pipelines, and LinkedIn profile optimization.',
-      'Simulated mock interviews with personalized feedback on posture, phrasing, and value proposition.',
-      'Administrative assistance with formal government documentation, credential recognition, and licenses.',
-    ],
-    outcomes: [
-      'A professional, applicant-tracking-system (ATS) friendly resume that attracts recruiter callbacks.',
-      'Unshakable poise and articulate storytelling in high-stakes job interview settings.',
-      'Accurately completed administrative documentation submitted without risk of costly rejections.',
-    ],
-  },
-  {
-    id: 'leadership-mentorship',
-    slug: 'leadership-mentorship',
-    title: 'Leadership Training & Women’s Mentorship',
-    navTitle: 'Leadership & Mentorship',
-    shortDescription:
-      'Cultivating women as community catalysts through structured mentorship pairings, seminars, and peer masterminds.',
-    fullDescription:
-      'Every woman carries intrinsic leadership potential capable of reshaping families, workplaces, and neighborhoods. Our leadership program pairs emerging women with seasoned mentors, hosts thematic masterclasses on public speaking and civic advocacy, and creates an inspiring space to grow your personal influence.',
-    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=1200&q=80',
-    quote: 'Leadership is not about holding a title—it is about unlocking greatness in those around you.',
-    impactMetrics: [
-      { value: '1-to-1', label: 'Curated Mentorship Pairs' },
-      { value: 'Monthly', label: 'Masterclasses & Seminars' },
-      { value: 'GTA & Beyond', label: 'Connected Sisterhood' },
-    ],
-    offerings: [
-      'Coaching women to discover their unique voice and make powerful contributions as neighborhood leaders.',
-      'Structured 1-to-1 mentorship pairing programs matching lived experience with seasoned career mentors.',
-      'Regular lectures, seminars, and interactive workshops addressing women’s health, equity, and civic voice.',
-      'Cross-generational roundtable discussions exploring cultural preservation and collective advancement.',
-    ],
-    outcomes: [
-      'Expanded professional and social network of empowered, high-achieving women.',
-      'Practical leadership skills in conflict resolution, team coordination, and public advocacy.',
-      'Elevated self-worth and a profound sense of purpose as an active community catalyst.',
+      'Comprehensive budgeting planning and continuous expense tracking',
+      'Debt resolution, financial fitness, and long-term security advisory',
+      'Practical tools and resources to alleviate poverty and achieve self-reliance',
     ],
   },
 ];
 
 export const ABOUT_CONTENT = {
   missionVision: {
-    headline: 'Our Core Mission & Vision',
+    headline: 'Our Guiding Philosophy',
     quote:
-      'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of individual energies.',
+      'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective.',
     paragraphs: [
-      'Women FE Woman was conceived out of a deep understanding of the systemic challenges faced by marginalized women, immigrant families, and single mothers across our communities. When an individual struggles in isolation, problems can feel insurmountable. But when women gather with mutual respect, shared accountability, and common intention, barriers collapse.',
-      'We believe in unconditional dignity, the celebration of lived wisdom, and the transformative strength of collective energy. Our vision is a society where every woman, regardless of her background or economic starting point, has immediate access to the tools, community support, and advocacy needed to flourish independently.',
+      'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective. (Together Each Achieve More). There is more than sufficient for everyone and if we assist others to realize their dreams and successes it naturally flows back to us.',
+      'Some people dream of fulfilment... We make it happen. At Women FE Woman, we live by the conviction that we experience happiness when we make others happy. We exist to ensure that every woman—regardless of background, economic standing, or past adversity—is surrounded by a committed sisterhood and equipped with the knowledge, dignity, and tools to step into her fullest potential.',
     ],
   },
   purposeAndMandate: {
     purpose: {
-      title: 'Our Purpose',
+      title: 'Purpose',
       content:
-        'Serving the tangible goals, desires, and dreams of marginalized women while tirelessly upholding their human rights, emotional wellness, and economic sovereignty.',
+        'To provide services, supports, and direction to women to meet their goals, desires, dreams and purposes in life. We aim to empower women to recognize their own self-worth, through self-knowledge both individually and collectively. We are committed to improving and promoting opportunities for women and to ensure that the rights of women in general and marginalized women in particular are upheld.',
       points: [
-        'Recognizing the intrinsic self-worth of every woman',
-        'Creating safe, non-judgmental platforms for authentic dialogue',
-        'Bridging the divide between marginalized communities and civic institutions',
+        'Providing services, supports, and direction to meet personal goals, desires, and dreams',
+        'Empowering self-worth through individual and collective self-knowledge',
+        'Improving and promoting opportunities for women across all spheres of life',
+        'Ensuring that the rights of women in general and marginalized women in particular are upheld',
       ],
     },
     mandate: {
-      title: 'Our Mandate',
+      title: 'Mandate',
       content:
-        'Meeting pressing social and economic needs by strengthening grassroots community foundations, pooled resources, and intergenerational mentorship.',
+        'To serve the social and economic needs of women in our communities. Through our commitment to strengthen community foundations and enable members to develop and share resources.',
       points: [
-        'Delivering free, accessible direct-impact service programs',
-        'Providing confidential advocacy in times of crisis and bureaucratic struggle',
-        'Promoting financial fitness and educational advancement across membership',
+        'Serving the immediate social and economic needs of women in our neighborhoods',
+        'Strengthening lasting community foundations through collective action',
+        'Enabling community members to actively develop, pool, and share vital resources',
       ],
     },
   },
 };
+
+export const AUTHENTIC_GOALS_LIST: string[] = [
+  'To alleviate poverty by empowering individuals and communities.',
+  'To serve our community by fostering togetherness and excellence in our collective pursuits.',
+  'To develop a multi-phased and multi-faceted initiative in a collective capacity to build women and to empower the community.',
+  'To promote education among the membership, and the sisters in general.',
+  'To actively participate in other women\'s groups and support common objectives.',
+  'To coordinate charitable relief activities.',
+  'Monitor the media and help dispel misconceptions and stereotypes.',
+  'Issue information circulars and / or articles.',
+  'Speak out against human rights violations.',
+  'To promote cross-cultural understanding through educational and multi-cultural resources.',
+];
+
+export const AUTHENTIC_OTHER_OBJECTIVES_LIST: string[] = [
+  'To assist women to locate resources in the community to meet their needs.',
+  'To provide adequate referrals and advocacy to community and other governmental agencies.',
+  'To provide administrative assistance for letter writing, resume completion, forms/documents completions, etc.',
+  'To provide financial management services, financial planning, debt resolution, budgeting, financial fitness, etc.',
+  'To provide training, coaching and resources for women to make powerful contributions as leaders in their communities.',
+  'To organize lectures and workshops on women issues.',
+  'To provide networking and mentoring program for women.',
+  'To provide a place for women where they can be real, be heard, promote themselves, and participate in a way that feels right for them.',
+  'To assist women in finding meaning and purpose in their lives through networking and belonging.',
+];
 
 export const ORGANIZATIONAL_GOALS: OrgGoal[] = [
   {
     id: 'goal-poverty',
     tabLabel: 'Poverty Alleviation',
-    title: 'Poverty Alleviation Through Individual & Community Empowerment',
+    title: 'Alleviating Poverty by Empowering Individuals & Communities',
     description:
-      'Moving beyond temporary band-aids to build sustainable foundations for long-term economic independence. We equip women with marketable competencies, budgeting tools, and access to living-wage employment.',
+      'We work proactively to alleviate poverty through financial management, skill development, and community resource pooling. By establishing debt resolution strategies, budgeting disciplines, and career advancement pipelines, we build sustainable foundations for generational self-reliance.',
     actions: [
-      'Structured financial literacy clinics focusing on budgeting, debt relief, and credit restoration',
-      'Direct referrals to community resources, emergency food infrastructure, and housing supports',
-      'Micro-savings circles and guidance on accessing small business grants and childcare subsidies',
+      'Financial management services: financial planning, debt resolution, budgeting, and financial fitness',
+      'Assisting women to locate resources in the community to meet their immediate and long-term needs',
+      'Coordinating charitable relief activities and emergency resource distributions for vulnerable families',
     ],
-    vision: 'A resilient community where generational poverty is broken by empowered mothers and sisters.',
+    vision: 'A thriving community where poverty is overcome through collective knowledge, resource-sharing, and economic self-determination.',
   },
   {
     id: 'goal-collective',
-    tabLabel: 'Collective Excellence',
-    title: 'Fostering Collective Excellence & Multi-Phased Community Initiatives',
+    tabLabel: 'Community & Excellence',
+    title: 'Fostering Togetherness, Excellence & Multi-Phased Initiatives',
     description:
-      'Harnessing the power of synergy. By pooling our diverse talents, professions, and networks, we create community initiatives that have lasting, compounding ripple effects across Toronto and beyond.',
+      'Serving our community by fostering togetherness and excellence in our collective pursuits. We develop a multi-phased and multi-faceted initiative in a collective capacity to build women and empower the community at large.',
     actions: [
-      'Monthly assembly circles connecting women across professions, trades, and artistic disciplines',
-      'Collaborative neighborhood outreach programs supporting seniors, young mothers, and youth',
-      'Skill-exchange hubs where women teach and learn languages, digital skills, and craftmanship',
+      'Regular assembly gatherings and support circles where women share experiences and collaborate',
+      'Actively participating in other women’s groups and supporting shared community objectives',
+      'Developing sustainable multi-phased programs that build women’s capacity as leaders and changemakers',
     ],
-    vision: 'Unleashing the collective genius of women to solve our neighborhood’s greatest challenges.',
+    vision: 'Together Each Achieve More (T.E.A.M.) — where our combined energy transforms entire neighborhoods.',
   },
   {
     id: 'goal-education',
-    tabLabel: 'Educational Promotion',
-    title: 'Promoting Education Among Membership & Sisters in General',
+    tabLabel: 'Education & Culture',
+    title: 'Promoting Education & Cross-Cultural Understanding',
     description:
-      'Knowledge is the greatest equalizer. We champion continuous adult education, credential evaluation for newcomers, university/college access, and specialized vocational certifications.',
+      'Promoting education among our membership and sisters in general, while cultivating cross-cultural understanding through educational and multicultural resources, lectures, and interactive workshops.',
     actions: [
-      'Assistance with post-secondary applications, OSAP navigation, and scholarship matching',
-      'Referrals to language training (ESL/LINC) and adult high-school diploma completion centers',
-      'Thematic educational seminars on digital literacy, health sciences, and civic law',
+      'Promoting educational advancement, academic pathways, and continuous adult learning',
+      'Organizing dynamic lectures, discussions, and workshops focused on women’s issues',
+      'Providing multicultural educational resources that celebrate diversity and bridge cultural gaps',
     ],
-    vision: 'Lifelong learning that enables every woman to adapt, thrive, and lead in a changing economy.',
+    vision: 'Lifelong learning and mutual cultural respect that empower women of every background to flourish.',
   },
   {
     id: 'goal-advocacy',
-    tabLabel: 'Charitable Relief & Human Rights',
-    title: 'Charitable Relief Coordination & Human Rights Advocacy',
+    tabLabel: 'Rights & Media Advocacy',
+    title: 'Speaking Out Against Rights Violations & Dispelling Stereotypes',
     description:
-      'Standing courageously against discrimination, media mischaracterizations, and institutional neglect. We actively dispel stereotypes while providing tangible relief supplies to families in transition.',
+      'Upholding the rights of women in general and marginalized women in particular. We monitor the media to dispel misconceptions and stereotypes, issue informative circulars, and courageously defend human dignity.',
     actions: [
-      'Direct distribution of essential supplies, clothing drives, and seasonal relief packages',
-      'Media literacy campaigns dispelling harmful stereotypes about marginalized and immigrant women',
-      'Representation and advocacy before housing tribunals, school boards, and welfare agencies',
+      'Monitoring media representations and actively dispelling damaging misconceptions and stereotypes',
+      'Speaking out boldly against human rights violations and standing with women in crisis',
+      'Issuing regular information circulars, educational bulletins, and advocacy articles',
     ],
-    vision: 'A just society where the human rights and dignity of every sister are unconditionally defended.',
+    vision: 'An equitable society where every woman’s rights, voice, and human dignity are unconditionally upheld.',
   },
   {
-    id: 'goal-multicultural',
-    tabLabel: 'Cross-Cultural Understanding',
-    title: 'Promoting Cross-Cultural Understanding & Multi-Cultural Resources',
+    id: 'goal-mentorship',
+    tabLabel: 'Leadership & Belonging',
+    title: 'Leadership Coaching, Mentorship & Safe Harbor',
     description:
-      'Celebrating the rich cultural tapestry of our community. We build bridges across ethnic, religious, and generational boundaries, ensuring every cultural voice enriches our collective wisdom.',
+      'Providing training, coaching, and resources for women to make powerful contributions as leaders in their communities. We maintain a nurturing harbor where women can be real, be heard, promote themselves, and discover meaning through belonging.',
     actions: [
-      'Intercultural celebrations, storytelling nights, and shared culinary traditions',
-      'Multi-lingual peer navigation guides for civic, healthcare, and educational institutions',
-      'Workshops breaking down cultural barriers and fostering inclusive sisterhood alliances',
+      'Structured networking and mentoring programs pairing emerging leaders with experienced mentors',
+      'Administrative assistance for letter writing, professional resume completion, and official forms',
+      'A safe, validating place to find voice, discover strengths, and experience genuine belonging',
     ],
-    vision: 'A harmonious, interconnected mosaic where diverse traditions strengthen our unified front.',
+    vision: 'Every woman discovering her intrinsic self-worth and leading with confidence in her family and community.',
   },
 ];
 
 export const TARGET_GROUP_DATA = {
+  whatsInItForMe: {
+    title: "What's In It For Me?",
+    subtitle: 'Tangible personal and collective returns of being part of Women FE Woman',
+    points: [
+      'A place to find support',
+      'A place to ask questions and get answers',
+      'An opportunity to brainstorm, to give and to receive information',
+      'The freedom to experience yourself as the kind of woman you really want to be',
+      'To build strong community and create new friendships in a relaxed setting',
+    ],
+  },
+  benefitsAndOpportunities: {
+    title: 'Benefits: This Will Be an Opportunity To:',
+    subtitle: 'Concrete pathways to personal, professional, and communal empowerment',
+    points: [
+      'Join a support group for women that will help you with goal-setting and achieving your goals',
+      'Connect with other women who have similar interests, challenges and experience',
+      'Contribute to the personal and professional empowerment of other women',
+      'Learn more about women in leadership, how you can bring leadership into every part of your life and how you can create a legacy you can be proud of',
+      'Create more life balance',
+      'Find a safe place to discover your strengths and to find your voice',
+    ],
+  },
+  supportsAndAssistance: [
+    {
+      title: 'Information and Referral for Community Services',
+      description:
+        'Guiding women directly to vital municipal, provincial, and grassroots resources tailored to their individual and family needs.',
+      details: [
+        'Assisting women to locate resources in the community to meet their needs',
+        'Adequate referrals and direct advocacy to community and governmental agencies',
+      ],
+    },
+    {
+      title: 'Information & Compassionate Support for Overcoming Abuse',
+      description:
+        'Trauma-informed, confidential guidance, crisis referrals, and accompaniment for women transitioning away from abusive environments.',
+      details: [
+        'Confidential crisis resources, transitional planning, and safety navigation',
+        'Non-judgmental emotional harbor and accompaniment to specialized agencies',
+      ],
+    },
+    {
+      title: 'Financial Management, Planning & Fitness',
+      description:
+        'Comprehensive financial services designed to alleviate poverty and cultivate lasting economic self-reliance.',
+      details: [
+        'Budgeting Planning: Hands-on cash flow strategies tailored to real living costs',
+        'Expense Tracking: Practical tools to command monthly expenses and eliminate stress',
+        'Debt resolution, credit rebuilding, and long-term financial planning',
+      ],
+    },
+    {
+      title: 'Employment Coaching & Administrative Support',
+      description:
+        'Equipping women with the tools, materials, and confidence to succeed in the modern job market.',
+      details: [
+        'Job Search Assistance and interview techniques',
+        'Cover letters & Résumes: Professional drafting and ATS optimization',
+        'Mock Interviews: Simulated interview sessions with feedback and confidence-building',
+        'Administrative assistance for letter writing, forms, and document completions',
+      ],
+    },
+  ],
   demographics: [
     {
       title: 'Women of All Ages & Backgrounds',
       description:
-        'From young women entering the workforce to seniors seeking social connection and purpose, our doors are unconditionally open.',
+        'From young women setting initial life goals to experienced sisters and seniors, our doors are unconditionally open.',
       needs: ['Life stage transitions', 'Intergenerational wisdom sharing', 'Isolation reduction'],
     },
     {
-      title: 'New Immigrants & Refugees',
+      title: 'Marginalized & Immigrant Women',
       description:
-        'Women building new lives in Canada who need trustworthy guidance, language support, and pathways to professional credential recognition.',
-      needs: ['Systemic settlement navigation', 'Community networking', 'Credential validation support'],
+        'Newcomers, racialized women, and sisters facing systemic barriers who need trusted referrals, credential recognition, and rights advocacy.',
+      needs: ['Community resource navigation', 'Advocacy with agencies', 'Cross-cultural understanding'],
     },
     {
       title: 'Single Mothers & Caregivers',
       description:
-        'Resilient heads of households balancing childcare, finances, and personal ambitions who require flexible, practical community support.',
-      needs: ['Childcare resource referrals', 'Emergency contingency planning', 'Flexible career coaching'],
+        'Resilient heads of households balancing family care, tight budgets, and career goals who benefit from practical financial fitness.',
+      needs: ['Budgeting planning & expense tracking', 'Community referrals', 'Flexible goal-setting'],
     },
     {
-      title: 'Aspiring Leaders & Changemakers',
+      title: 'Aspiring Leaders & Catalysts',
       description:
-        'Women passionate about giving back, mobilizing neighborhood initiatives, and shaping positive civic policies in Scarborough and the GTA.',
-      needs: ['Mentorship pairing', 'Public advocacy skills', 'Leadership development platforms'],
+        'Women eager to learn more about leadership, make powerful contributions to their communities, and create a proud legacy.',
+      needs: ['Mentorship programs', 'Leadership coaching & workshops', 'Community capacity building'],
     },
-  ],
-  benefitsShowcase: [
-    {
-      id: 'benefit-safe-space',
-      category: 'Safe Harbors',
-      title: 'A Safe, Authentic Place to Be Heard',
-      description:
-        'Find genuine emotional support, ask vulnerable questions, and share your deepest aspirations in a strictly confidential, non-judgmental community.',
-      highlights: [
-        'Zero judgment, 100% confidentiality',
-        'Facilitated listening circles led by experienced moderators',
-        'Empathetic peers who understand your lived experiences',
-      ],
-    },
-    {
-      id: 'benefit-self-actualization',
-      category: 'Empowerment',
-      title: 'Freedom to Experience Your True Potential',
-      description:
-        'Step out from societal constraints and rediscover yourself as the confident, capable, and visionary woman you were meant to be.',
-      highlights: [
-        'Goal setting and personal accountability frameworks',
-        'Confidence-building and public speaking practice',
-        'Celebration of small and monumental life milestones',
-      ],
-    },
-    {
-      id: 'benefit-sisterhood',
-      category: 'Connection',
-      title: 'Lifelong Friendships & Deep Community',
-      description:
-        'Build durable friendships in a relaxed, warm atmosphere where sisterhood extends far beyond meetings into everyday life.',
-      highlights: [
-        'Relaxed community gatherings and tea socials',
-        'Intergenerational mentorship networks',
-        'A reliable circle of sisters who check in and care',
-      ],
-    },
-    {
-      id: 'benefit-tangible-tools',
-      category: 'Growth',
-      title: 'Tangible Tools for Daily Life & Security',
-      description:
-        'Walk away from every session with actionable skills—from practical budget tracking to polished interview techniques and civic resource maps.',
-      highlights: [
-        'Personalized financial worksheets and templates',
-        'Hands-on resume reviews and mock interviews',
-        'Direct contact links to essential government programs',
-      ],
-    },
-  ],
-  matrix: [
-    {
-      area: 'Community Service Referrals',
-      whatWeProvide: 'Direct connections to housing, subsidized childcare, healthcare clinics, and legal aid.',
-      whoBenefits: 'Families in transition, newcomers, and individuals facing bureaucratic roadblocks.',
-    },
-    {
-      area: 'Support Overcoming Abuse',
-      whatWeProvide: 'Confidential, trauma-informed crisis referrals, safety planning resources, and emotional accompaniment.',
-      whoBenefits: 'Survivors rebuilding their independence in a discreet, compassionate harbor.',
-    },
-    {
-      area: 'Financial Literacy & Budgeting',
-      whatWeProvide: 'Step-by-step debt management, credit rebuilding, and household cash flow blueprints.',
-      whoBenefits: 'Mothers seeking economic stability, small business starters, and debt-burdened individuals.',
-    },
-    {
-      area: 'Career Transition Pathways',
-      whatWeProvide: 'ATS-tailored resumes, cover letter completion, interview coaching, and administrative assistance.',
-      whoBenefits: 'Job seekers, career changers, and internationally educated professionals.',
-    },
-  ],
-  checklist: [
-    'Clear, actionable personal and professional goal setting',
-    'Developing confident, articulate public speaking and advocacy voice',
-    'Cultivating harmonious life balance between family, work, and self-care',
-    'Access to vetted municipal, provincial, and community programs',
-    'Establishing emergency personal savings and debt resolution plans',
-    'Ongoing 1-on-1 mentorship and accountability with trusted leaders',
   ],
 };
 
+export const SERVICES_DATA: ServiceItem[] = [
+  {
+    id: 'community-advocacy-referrals',
+    slug: 'advocacy-referrals',
+    title: 'Information & Referral for Community Services',
+    navTitle: 'Information & Referrals',
+    shortDescription:
+      'Locating community resources, providing adequate referrals and advocacy to governmental agencies, and supporting women overcoming abuse.',
+    fullDescription:
+      'Navigating public agencies and community resources can be daunting. Women FE Woman assists women in locating verified community resources, provides adequate referrals and advocacy before community and governmental agencies, and offers confidential information and support for women escaping abusive situations.',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80',
+    quote: 'To provide services, supports, and direction to women to meet their goals, desires, dreams and purposes in life.',
+    impactMetrics: [
+      { value: '100%', label: 'Confidentiality' },
+      { value: 'Direct', label: 'Agency Referrals' },
+      { value: 'Compassionate', label: 'Casework Advocacy' },
+    ],
+    offerings: [
+      'Assisting women to locate resources in the community to meet their pressing needs',
+      'Adequate referrals and advocacy to community and governmental agencies',
+      'Confidential support and information for women overcoming abusive environments',
+      'Coordination of charitable relief activities and emergency community supplies',
+    ],
+    outcomes: [
+      'Direct access to vital community resources without bureaucratic delays',
+      'Clear understanding of rights and agency processes with a dedicated advocate by your side',
+      'Immediate, confidential support pathways for personal safety and transition',
+    ],
+  },
+  {
+    id: 'financial-management',
+    slug: 'financial-empowerment',
+    title: 'Financial Management: Budgeting Planning & Expense Tracking',
+    navTitle: 'Financial Management',
+    shortDescription:
+      'Practical budgeting planning, expense tracking, debt resolution, and financial fitness services to alleviate poverty and build security.',
+    fullDescription:
+      'Financial independence is foundational to personal dignity. Our financial management program provides women with step-by-step budgeting planning, structured expense tracking, debt resolution counseling, and overall financial fitness so they can achieve their goals and create lasting family stability.',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+    quote: 'Alleviating poverty by empowering individuals and communities through financial self-knowledge.',
+    impactMetrics: [
+      { value: 'Practical', label: 'Budgeting Planning' },
+      { value: 'Daily', label: 'Expense Tracking' },
+      { value: 'Holistic', label: 'Debt Resolution' },
+    ],
+    offerings: [
+      'Budgeting Planning: Hands-on household and personal budget blueprinting',
+      'Expense Tracking: Clear systems to monitor expenditures and reduce unnecessary strain',
+      'Financial management services, financial planning, debt resolution, and financial fitness',
+      'Strategies to alleviate poverty through informed financial decision-making',
+    ],
+    outcomes: [
+      'Full command over monthly cash flow through structured budgeting planning',
+      'Actionable pathways to resolve debt and establish emergency savings funds',
+      'Restored confidence, peace of mind, and financial self-sufficiency',
+    ],
+  },
+  {
+    id: 'employment-administrative-coaching',
+    slug: 'career-development',
+    title: 'Employment Coaching, Resumes & Administrative Assistance',
+    navTitle: 'Employment & Resumes',
+    shortDescription:
+      'Job search assistance, interview techniques, cover letters & resumes, mock interviews, and administrative letter-writing support.',
+    fullDescription:
+      'Securing fulfilling employment requires effective presentation and proven technique. We provide personalized job search assistance, tailored cover letters, ATS-formatted resumes, and realistic mock interviews with constructive coaching. In addition, we assist with administrative letter writing, form completion, and official documentation.',
+    image: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1200&q=80',
+    quote: 'Some people dream of fulfilment... We make it happen.',
+    impactMetrics: [
+      { value: 'Tailored', label: 'Resumes & Letters' },
+      { value: 'Realistic', label: 'Mock Interviews' },
+      { value: 'Step-by-Step', label: 'Job Search Strategy' },
+    ],
+    offerings: [
+      'Job Search Assistance and modern interview techniques',
+      'Professional cover letters & ATS-compliant resumes completion',
+      'Interactive mock interviews with constructive feedback to build unshakable confidence',
+      'Administrative assistance for letter writing, resume completion, and official forms/documents',
+    ],
+    outcomes: [
+      'A polished, competitive resume and cover letter ready for prospective employers',
+      'Confident, articulate interview performance backed by mock interview practice',
+      'Accurately completed administrative documentation submitted without delay',
+    ],
+  },
+  {
+    id: 'women-in-leadership-mentorship',
+    slug: 'leadership-mentorship',
+    title: 'Women in Leadership, Networking & Mentoring Program',
+    navTitle: 'Leadership & Mentoring',
+    shortDescription:
+      'Training, coaching and resources for women as community leaders, networking and mentoring, and lectures on women’s issues.',
+    fullDescription:
+      'Every woman has the capacity to lead and make powerful contributions to her community. Our leadership and mentoring program offers training, coaching, and resources for women to bring leadership into every part of their lives, create a lasting legacy, build sisterhood through networking, and participate in enriching lectures and workshops.',
+    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=1200&q=80',
+    quote: 'Together Each Achieve More — creating a legacy you can be proud of.',
+    impactMetrics: [
+      { value: '1-on-1', label: 'Mentorship Program' },
+      { value: 'Community', label: 'Lectures & Workshops' },
+      { value: 'Safe', label: 'Place to Be Real' },
+    ],
+    offerings: [
+      'Training, coaching and resources for women to make powerful contributions as leaders in their communities',
+      'Structured networking and mentoring program for women',
+      'Lectures and workshops addressing critical women’s issues and cross-cultural understanding',
+      'A safe place for women where they can be real, be heard, promote themselves, and participate',
+      'Assisting women in finding meaning and purpose in their lives through networking and belonging',
+    ],
+    outcomes: [
+      'Strong leadership competencies applicable to personal, family, and community realms',
+      'A lifelong network of supportive mentors, peers, and sisters',
+      'A profound sense of purpose, self-worth, and empowerment',
+    ],
+  },
+];
+
 export const FAQ_ITEMS = [
   {
-    question: 'How do I join community gatherings and programs?',
+    question: 'How do I join Women FE Woman gatherings and programs?',
     answer:
-      'You can register online using our contact form, or reach out directly to Judith Kerr by phone at (416) 918-3177 or via email at Judith.kerr@alumni.utoronto.ca. We will send you complete schedule, venue, and secure Zoom link details.',
+      'You can register online using our contact form, or reach out directly to Judith Kerr by phone at (416) 918-3177 or via email at Judith.kerr@alumni.utoronto.ca. We will share schedule details for our in-person sessions in Scarborough and secure virtual Zoom sessions.',
   },
   {
     question: 'Are Women FE Woman programs free of charge?',
     answer:
-      'Yes. Our meetings, advocacy support, educational workshops, and mentorship programs are provided free of cost to ensure accessibility for all women regardless of their financial circumstances.',
+      'Yes. Our community support circles, advocacy assistance, educational workshops, budgeting clinics, and mentorship programs are provided free of cost to ensure accessibility for all women.',
   },
   {
-    question: 'What if I need confidential assistance regarding family hardship or abuse?',
+    question: 'What if I need confidential assistance regarding abuse or family hardship?',
     answer:
-      'Your privacy and safety are sacred. All communications are held in strict confidence. We provide discreet 1-on-1 accompaniment and refer you to specialized, certified crisis resources when appropriate.',
+      'Your privacy, safety, and dignity are our utmost priority. All inquiries are held in strict confidence. We provide direct accompaniment, safe listening, and immediate referrals to verified community crisis resources.',
   },
   {
-    question: 'Where are meetings held?',
+    question: 'Where are meetings and workshops held?',
     answer:
-      'We operate out of our community hub in Scarborough (Greater Toronto Area) and simultaneously provide secure virtual access (Zoom) so women across Ontario and beyond can participate seamlessly.',
+      'We operate out of our community hub in Scarborough (Greater Toronto Area) and host hybrid sessions via Zoom, allowing sisters across the region and beyond to participate comfortably.',
   },
 ];
