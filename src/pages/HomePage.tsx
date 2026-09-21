@@ -34,7 +34,7 @@ export const HomePage: React.FC = () => {
 
               <FadeUp delay={0.2} yOffset={20}>
                 <p className="text-base sm:text-lg text-[#575757] max-w-2xl leading-relaxed font-normal">
-                  Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective.
+                  Empowering women and marginalized communities to recognize self-worth through collective energy, equity, practical skill-building, and sustainable self-reliance.
                 </p>
               </FadeUp>
 

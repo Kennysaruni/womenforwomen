@@ -50,7 +50,7 @@ export const TargetGroupPage: React.FC = () => {
           </FadeUp>
           <FadeUp delay={0.2} yOffset={20}>
             <p className="text-base sm:text-lg text-[#F8EAF0] max-w-2xl font-light">
-              Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved.
+              A welcoming, non-judgmental community for women of all backgrounds seeking goal-setting guidance, economic self-reliance, and lifelong sisterhood.
             </p>
           </FadeUp>
         </div>
@@ -68,7 +68,7 @@ export const TargetGroupPage: React.FC = () => {
                 Who Belongs at Women FE Woman?
               </h2>
               <p className="text-sm sm:text-base text-[#575757]">
-                We seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective.
+                Our doors are unconditionally open to every woman navigating life transitions, overcoming systemic barriers, or seeking a trusted circle where she can be real and be heard.
               </p>
             </div>
           </FadeUp>

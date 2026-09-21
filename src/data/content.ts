@@ -39,7 +39,7 @@ export const CORE_PHILOSOPHY = {
   quoteUppercase: '...WE EXPERIENCE HAPPINESS WHEN WE MAKE OTHERS HAPPY...',
   attribution: 'Judith Kerr, Founder of Women FE Woman',
   summary:
-    'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective. (Together Each Achieve More). There is more than sufficient for everyone and if we assist others to realize their dreams and successes it naturally flows back to us.',
+    'Rooted in the proven principle that the combined energy of several people focusing on the same problem multiplies our strength; we believe that when we assist others to realize their dreams and successes, abundance naturally flows back to us.',
 };
 
 export const PRIMARY_PILLARS: ObjectivePillar[] = [
@@ -99,7 +99,7 @@ export const ABOUT_CONTENT = {
     quote:
       'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective.',
     paragraphs: [
-      'Founded on the proven principle that the combined energy of several people focusing on the same problem is many times greater than the sum of the individual energies involved; we seek to empower all women and specifically marginalized women to recognize their own self-worth through self-knowledge both as individuals and as a collective. (Together Each Achieve More). There is more than sufficient for everyone and if we assist others to realize their dreams and successes it naturally flows back to us.',
+      'Rooted in the philosophy of Together Each Achieve More (T.E.A.M.), we believe there is more than sufficient for everyone. When sisters unite with shared purpose, what seems insurmountable in isolation becomes achievable through collective strength.',
       'Some people dream of fulfilment... We make it happen. At Women FE Woman, we live by the conviction that we experience happiness when we make others happy. We exist to ensure that every woman—regardless of background, economic standing, or past adversity—is surrounded by a committed sisterhood and equipped with the knowledge, dignity, and tools to step into her fullest potential.',
     ],
   },

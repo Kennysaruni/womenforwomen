@@ -39,7 +39,7 @@ export const AboutPage: React.FC = () => {
           </FadeUp>
           <FadeUp delay={0.2} yOffset={20}>
             <p className="text-base sm:text-lg text-[#F8EAF0] max-w-2xl font-light">
-              Rooted in the proven principle that together, our combined strength multiplies beyond any individual challenge.
+              A dedicated community initiative fostering togetherness, mutual support, and human dignity across the Greater Toronto Area and beyond.
             </p>
           </FadeUp>
         </div>
