@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wine-950: #2E0B16;
+  --color-wine-900: #4A1525;
+  --color-wine-850: #54172A;
+  --color-wine-800: #5A192E;
+  --color-wine-700: #74223D;
+  --color-wine-600: #932D4F;
+  --color-wine-200: #E7BDD1;
+  --color-wine-100: #F3D5E2;
+  --color-wine-50: #FDF4F8;
+
+  --color-magenta-700: #AD1457;
+  --color-magenta-600: #C2185B;
+  --color-magenta-500: #D81B60;
+  --color-magenta-400: #E91E63;
+  --color-magenta-300: #F06292;
+  --color-magenta-100: #FCE4EC;
+  --color-magenta-50: #FFF0F5;
+
+  --color-lilac-50: #FAF4F7;
+  --color-lilac-100: #F8EAF0;
+  --color-lilac-200: #F3D5E2;
+  --color-lilac-300: #E9BFD4;
+
+  --color-charcoal-900: #191919;
+  --color-charcoal-800: #292929;
+  --color-charcoal-700: #404040;
+  --color-charcoal-600: #575757;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base custom styles & Resets */
+:root {
+  --primary-wine: #4A1525;
+  --primary-wine-dark: #380E1B;
+  --accent-magenta: #D81B60;
+  --accent-magenta-bright: #E91E63;
+  --surface-lilac: #F8EAF0;
+  --surface-lilac-tint: #F3D5E2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #1F1F1F;
+  background-color: #FAF6F8;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-serif);
+}
+
+/* Editorial Eyebrow Headings (Replaces rectangle tag boxes) */
+.eyebrow-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #D81B60;
+}
+
+.eyebrow-accent::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #D81B60;
+  flex-shrink: 0;
+}
+
+.eyebrow-accent-center {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #D81B60;
+}
+
+.eyebrow-accent-center::before,
+.eyebrow-accent-center::after {
+  content: '';
+  display: inline-block;
+  width: 1.75rem;
+  height: 2px;
+  background-color: #D81B60;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.eyebrow-accent-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F8EAF0;
+}
+
+.eyebrow-accent-dark::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #E91E63;
+  flex-shrink: 0;
+}
+
+/* Glassmorphism surfaces */
+.glass-wine {
+  background: rgba(74, 21, 37, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Subtle decorative line element */
+.subtle-line-accent {
+  width: 3.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, #D81B60, #E91E63);
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #D81B60;
+  outline-offset: 2px;
+}
