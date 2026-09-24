@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Layers,
+  MapPin,
 } from 'lucide-react';
 import {
   ABOUT_CONTENT,
@@ -16,9 +17,11 @@ import {
 } from '../data/content';
 import { FadeUp, StaggerContainer, StaggerItem, ScaleReveal, HoverLift } from '../components/MotionReveal';
 import { HeroBackgroundCarousel } from '../components/HeroBackgroundCarousel';
+import { CommunityGallery } from '../components/CommunityGallery';
 
 export const AboutPage: React.FC = () => {
   const [activeGoalIndex, setActiveGoalIndex] = useState(0);
+  const [facilitatorPhotoView, setFacilitatorPhotoView] = useState<'portrait' | 'kapenguria'>('portrait');
   const activeGoal = ORGANIZATIONAL_GOALS[activeGoalIndex];
 
   return (
@@ -81,9 +84,9 @@ export const AboutPage: React.FC = () => {
               <ScaleReveal delay={0.2}>
                 <div className="border-2 border-[#D81B60]/30 p-2 bg-[#F8EAF0] shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=80"
-                    alt="Supportive community circle of women"
-                    className="w-full h-80 object-cover"
+                    src="/images/community/women-group-gathering.jpg"
+                    alt="Supportive community circle of women - Together Each Achieve More"
+                    className="w-full h-80 object-cover object-center"
                   />
                   <div className="p-4 bg-white border-t border-[#E7BDD1] text-left">
                     <span className="text-xs uppercase tracking-wider text-[#D81B60] font-semibold block">
@@ -368,21 +371,91 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Judith Kerr Leadership Profile */}
-      <section className="py-16 sm:py-24 bg-[#FAF4F7]">
+      {/* 6. Sisterhood & Community Moments Gallery */}
+      <section className="py-16 sm:py-24 bg-[#FAF4F7] border-b border-[#F3D5E2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-[#E7BDD1] overflow-hidden shadow-sm">
+          <CommunityGallery />
+        </div>
+      </section>
+
+      {/* 7. Judith Kerr Leadership Profile */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#FAF4F7] border border-[#E7BDD1] overflow-hidden shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12">
-              {/* Left Photo */}
-              <div className="lg:col-span-5 relative flex items-center justify-center bg-[#380E1B] p-6 sm:p-8">
+              {/* Left Photo & Outreach Toggle */}
+              <div className="lg:col-span-5 relative flex flex-col items-center justify-center bg-[#380E1B] p-6 sm:p-8 space-y-4">
+                {/* Switcher pills */}
+                <div className="flex items-center gap-1.5 p-1 bg-[#250812] border border-[#5A192E] z-10">
+                  <button
+                    onClick={() => setFacilitatorPhotoView('portrait')}
+                    className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
+                      facilitatorPhotoView === 'portrait'
+                        ? 'bg-[#D81B60] text-white shadow'
+                        : 'text-[#F3D5E2]/70 hover:text-white'
+                    }`}
+                  >
+                    Leadership Portrait
+                  </button>
+                  <button
+                    onClick={() => setFacilitatorPhotoView('kapenguria')}
+                    className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1 ${
+                      facilitatorPhotoView === 'kapenguria'
+                        ? 'bg-[#D81B60] text-white shadow'
+                        : 'text-[#F3D5E2]/70 hover:text-white'
+                    }`}
+                  >
+                    <MapPin className="w-3 h-3" />
+                    <span>Kapenguria, Kenya</span>
+                  </button>
+                </div>
+
                 <ScaleReveal delay={0.15} className="w-full max-w-sm">
-                  <div className="relative w-full aspect-square overflow-hidden border border-[#D81B60]/40 shadow-xl">
-                    <img
-                      src={FACILITATOR_INFO.image}
-                      alt={FACILITATOR_INFO.name}
-                      className="w-full h-full object-cover object-center"
-                    />
+                  <div className="relative w-full aspect-square overflow-hidden border border-[#D81B60]/40 shadow-xl bg-black">
+                    <AnimatePresence mode="wait">
+                      {facilitatorPhotoView === 'portrait' ? (
+                        <motion.img
+                          key="portrait"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          src={FACILITATOR_INFO.image}
+                          alt={FACILITATOR_INFO.name}
+                          className="w-full h-full object-cover object-center"
+                        />
+                      ) : (
+                        <motion.div
+                          key="kapenguria"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="relative w-full h-full"
+                        >
+                          <img
+                            src={FACILITATOR_INFO.kapenguriaImage || '/images/judith-kapenguria-kenya.jpeg'}
+                            alt={`${FACILITATOR_INFO.name} in Kapenguria, Kenya`}
+                            className="w-full h-full object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/90 via-transparent to-transparent" />
+                          <div className="absolute bottom-3 left-3 right-3 text-white text-left">
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-[#F8EAF0] block">
+                              Grassroots Outreach
+                            </span>
+                            <span className="text-xs font-serif font-bold text-white">
+                              Kapenguria, Kenya
+                            </span>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
+                  <p className="text-[11px] text-[#F3D5E2]/80 mt-2 text-center">
+                    {facilitatorPhotoView === 'portrait'
+                      ? 'Judith Kerr — Founder & Group Facilitator'
+                      : 'Judith Kerr standing with community members in Kapenguria, Kenya'}
+                  </p>
                 </ScaleReveal>
               </div>
 

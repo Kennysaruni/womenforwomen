@@ -5,7 +5,6 @@ import {
   ArrowRight,
   HeartHandshake,
   MessageSquareQuote,
-  Sparkles,
   Users,
   Compass,
   ShieldAlert,
@@ -20,7 +19,7 @@ export const TargetGroupPage: React.FC = () => {
   const whatsInItIcons = [
     HeartHandshake,
     MessageSquareQuote,
-    Sparkles,
+    Briefcase,
     Compass,
     Users,
   ];
@@ -155,6 +154,47 @@ export const TargetGroupPage: React.FC = () => {
               );
             })}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Visual Sisterhood Interlude */}
+      <section className="py-12 bg-white border-b border-[#F3D5E2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="relative border border-[#E7BDD1] overflow-hidden group shadow-md">
+              <img
+                src="/images/community/women-celebrating.jpg"
+                alt="Women celebrating sisterhood and unity"
+                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white text-left">
+                <span className="text-[10px] uppercase tracking-widest text-[#F8EAF0] font-mono font-semibold block">
+                  Together Each Achieve More
+                </span>
+                <p className="text-base font-serif font-bold text-white mt-1">
+                  "We experience happiness when we make others happy."
+                </p>
+              </div>
+            </div>
+
+            <div className="relative border border-[#E7BDD1] overflow-hidden group shadow-md">
+              <img
+                src="/images/community/black-women-collaboration.jpg"
+                alt="Women entrepreneurs collaborating"
+                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 text-white text-left">
+                <span className="text-[10px] uppercase tracking-widest text-[#F8EAF0] font-mono font-semibold block">
+                  Shared Purpose & Enterprise
+                </span>
+                <p className="text-base font-serif font-bold text-white mt-1">
+                  Discovering strengths, skills, and collective self-reliance.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -239,18 +239,32 @@ export const ContactPage: React.FC = () => {
             <div className="lg:col-span-5 space-y-6 text-left">
               {/* Facilitator Card */}
               <ScaleReveal delay={0.15}>
-                <div className="bg-[#4A1525] text-white p-8 border border-[#D81B60]/40 shadow-xl space-y-6">
-                  <div className="space-y-2">
-                    <div className="eyebrow-accent-dark">
-                      <span>Direct Facilitation</span>
+                <div className="bg-[#4A1525] text-white border border-[#D81B60]/40 shadow-xl overflow-hidden">
+                  <div className="relative h-56 sm:h-64 overflow-hidden bg-[#2E0B16]">
+                    <img
+                      src="/images/judith-kapenguria-kenya.jpeg"
+                      alt="Judith Kerr during grassroots outreach in Kapenguria, Kenya"
+                      className="w-full h-full object-cover object-top"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#4A1525] via-transparent to-transparent opacity-90" />
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2.5 py-1 bg-[#2E0B16]/90 backdrop-blur-sm text-white text-[10px] font-mono uppercase tracking-wider font-semibold">
+                        Outreach • Kapenguria, Kenya
+                      </span>
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-white">
-                      Judith Kerr
-                    </h3>
-                    <p className="text-xs uppercase tracking-widest text-[#E91E63] font-semibold">
-                      Group Facilitator & Founder
-                    </p>
                   </div>
+                  <div className="p-8 space-y-6">
+                    <div className="space-y-2">
+                      <div className="eyebrow-accent-dark">
+                        <span>Direct Facilitation</span>
+                      </div>
+                      <h3 className="text-2xl font-serif font-bold text-white">
+                        Judith Kerr
+                      </h3>
+                      <p className="text-xs uppercase tracking-widest text-[#E91E63] font-semibold">
+                        Group Facilitator & Founder
+                      </p>
+                    </div>
 
                   <p className="text-xs sm:text-sm text-[#F8EAF0] leading-relaxed">
                     Judith coordinates group meetings, intake assessments, and institutional casework directly with women across the Greater Toronto Area.
@@ -297,7 +311,8 @@ export const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </ScaleReveal>
+              </div>
+            </ScaleReveal>
 
               {/* Confidentiality & Safe Harbor Card */}
               <FadeUp delay={0.25}>

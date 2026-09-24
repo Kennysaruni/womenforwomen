@@ -3,6 +3,7 @@ import type {
   ObjectivePillar,
   OrgGoal,
   FacilitatorContact,
+  CommunityGalleryItem,
 } from '../types';
 
 export const FACILITATOR_INFO: FacilitatorContact = {
@@ -14,6 +15,7 @@ export const FACILITATOR_INFO: FacilitatorContact = {
   location: 'Scarborough / Greater Toronto Area & Global Virtual Outreach',
   bio: 'Dedicated community builder, advocate, and founder of Women FE Woman. Judith Kerr has spent decades connecting marginalized women to life-transforming institutional resources, advocacy networks, and structured community care.',
   image: '/judith-portrait.jpg',
+  kapenguriaImage: '/images/judith-kapenguria-kenya.jpeg',
 };
 
 export const UPCOMING_MEETING = {
@@ -324,7 +326,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Locating community resources, providing adequate referrals and advocacy to governmental agencies, and supporting women overcoming abuse.',
     fullDescription:
       'Navigating public agencies and community resources can be daunting. Women FE Woman assists women in locating verified community resources, provides adequate referrals and advocacy before community and governmental agencies, and offers confidential information and support for women escaping abusive situations.',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/community/women-solidarity.jpg',
     quote: 'To provide services, supports, and direction to women to meet their goals, desires, dreams and purposes in life.',
     impactMetrics: [
       { value: '100%', label: 'Confidentiality' },
@@ -352,7 +354,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Practical budgeting planning, expense tracking, debt resolution, and financial fitness services to alleviate poverty and build security.',
     fullDescription:
       'Financial independence is foundational to personal dignity. Our financial management program provides women with step-by-step budgeting planning, structured expense tracking, debt resolution counseling, and overall financial fitness so they can achieve their goals and create lasting family stability.',
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/community/women-empowerment-circle.jpg',
     quote: 'Alleviating poverty by empowering individuals and communities through financial self-knowledge.',
     impactMetrics: [
       { value: 'Practical', label: 'Budgeting Planning' },
@@ -380,7 +382,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Job search assistance, interview techniques, cover letters & resumes, mock interviews, and administrative letter-writing support.',
     fullDescription:
       'Securing fulfilling employment requires effective presentation and proven technique. We provide personalized job search assistance, tailored cover letters, ATS-formatted resumes, and realistic mock interviews with constructive coaching. In addition, we assist with administrative letter writing, form completion, and official documentation.',
-    image: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/community/black-women-collaboration.jpg',
     quote: 'Some people dream of fulfilment... We make it happen.',
     impactMetrics: [
       { value: 'Tailored', label: 'Resumes & Letters' },
@@ -408,7 +410,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Training, coaching and resources for women as community leaders, networking and mentoring, and lectures on women’s issues.',
     fullDescription:
       'Every woman has the capacity to lead and make powerful contributions to her community. Our leadership and mentoring program offers training, coaching, and resources for women to bring leadership into every part of their lives, create a lasting legacy, build sisterhood through networking, and participate in enriching lectures and workshops.',
-    image: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/community/community-workshop.jpg',
     quote: 'Together Each Achieve More — creating a legacy you can be proud of.',
     impactMetrics: [
       { value: '1-on-1', label: 'Mentorship Program' },
@@ -450,5 +452,71 @@ export const FAQ_ITEMS = [
     question: 'Where are meetings and workshops held?',
     answer:
       'We operate out of our community hub in Scarborough (Greater Toronto Area) and host hybrid sessions via Zoom, allowing sisters across the region and beyond to participate comfortably.',
+  },
+];
+
+export const COMMUNITY_GALLERY: CommunityGalleryItem[] = [
+  {
+    id: 'kapenguria-outreach',
+    image: '/images/judith-kapenguria-kenya.jpeg',
+    title: 'Grassroots Community Outreach',
+    category: 'Global Outreach',
+    caption: 'Founder Judith Kerr standing shoulder-to-shoulder with community members and families during grassroots outreach in Kapenguria, Kenya.',
+    location: 'Kapenguria, Kenya',
+    featured: true,
+  },
+  {
+    id: 'sisterhood-assembly',
+    image: '/images/community/community-workshop.jpg',
+    title: 'Community Assembly & Sisterhood Circles',
+    category: 'Assemblies',
+    caption: 'A vibrant collective of women celebrating mutual strength, resilience, and unity with hands raised high.',
+    location: 'Community Assembly',
+    featured: true,
+  },
+  {
+    id: 'practical-skills-budgeting',
+    image: '/images/community/women-empowerment-circle.jpg',
+    title: 'Financial Planning & Skill Workshop',
+    category: 'Financial Fitness',
+    caption: 'Women actively collaborating on budgeting strategies, expense tracking, and structured personal development around the workshop table.',
+    location: 'Scarborough Community Hub',
+    featured: true,
+  },
+  {
+    id: 'entrepreneurship-collaboration',
+    image: '/images/community/black-women-collaboration.jpg',
+    title: 'Enterprise & Collaborative Growth',
+    category: 'Career & Enterprise',
+    caption: 'Women entrepreneurs supporting one another, leveraging shared vision and technology to build self-reliance and small businesses.',
+    location: 'Scarborough / GTA',
+    featured: true,
+  },
+  {
+    id: 'authentic-friendships',
+    image: '/images/community/women-group-gathering.jpg',
+    title: 'Shared Joy & Authentic Connection',
+    category: 'Sisterhood & Care',
+    caption: 'Warm, safe gatherings where women can be real, be heard, and build lifelong friendships in a relaxed and welcoming setting.',
+    location: 'Sisterhood Gathering',
+    featured: true,
+  },
+  {
+    id: 'unshakable-solidarity',
+    image: '/images/community/women-solidarity.jpg',
+    title: 'Walking Together in Solidarity',
+    category: 'Advocacy & Support',
+    caption: 'United in purpose and mutual support, proving that collective energy multiplies our strength during every transition.',
+    location: 'Advocacy Network',
+    featured: true,
+  },
+  {
+    id: 'team-philosophy',
+    image: '/images/community/women-celebrating.jpg',
+    title: 'Together Each Achieve More (T.E.A.M.)',
+    category: 'Core Philosophy',
+    caption: 'Expressing heart-to-heart unity across our communities: "We experience happiness when we make others happy."',
+    location: 'Annual Assembly',
+    featured: true,
   },
 ];

@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const CAROUSEL_IMAGES = [
+  '/images/community/women-group-gathering.jpg',
+  '/images/community/community-workshop.jpg',
+  '/images/judith-kapenguria-kenya.jpeg',
+  '/images/community/women-solidarity.jpg',
+  '/images/community/black-women-collaboration.jpg',
+  '/images/community/women-celebrating.jpg',
   '/carousel/9cc7d6_25d74fcecbf562beae580501edee61f8.avif',
   '/carousel/9cc7d6_ec3e584c1c209b4f838b8599ed8ed1c3.avif',
   '/carousel/9cc7d6_dde8bfd59e3002c958eec6c6fde91087.avif',
-  '/carousel/9cc7d6_f20ec4530e9bc08dfce42131567d13b5.avif',
-  '/carousel/9cc7d6_60738e17ccbb28f8860556b9ce71d262.avif',
-  '/carousel/9cc7d6_43ddba5d35c52c45ea353917bbf40767.avif',
-  '/carousel/9cc7d6_23e1f095aeb704675346f6c452680b78.avif',
 ];
 
 interface HeroBackgroundCarouselProps {

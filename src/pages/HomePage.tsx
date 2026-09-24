@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react';
 import { CORE_PHILOSOPHY, PRIMARY_PILLARS, SERVICES_DATA, FACILITATOR_INFO } from '../data/content';
 import { FadeUp, StaggerContainer, StaggerItem, ScaleReveal, HoverLift } from '../components/MotionReveal';
+import { CommunityGallery } from '../components/CommunityGallery';
 
 export const HomePage: React.FC = () => {
   return (
@@ -312,7 +313,14 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Community Invitation Banner - Light Surface */}
+      {/* 5. Community Moments & Sisterhood Gallery */}
+      <section className="py-16 sm:py-24 bg-[#FAF4F7] border-y border-[#F3D5E2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CommunityGallery />
+        </div>
+      </section>
+
+      {/* 6. Community Invitation Banner - Light Surface */}
       <section className="bg-gradient-to-b from-[#FAF4F7] via-[#F8EAF0] to-[#FAF4F7] py-16 border-t border-[#E7BDD1]">
         <FadeUp yOffset={24}>
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">

@@ -53,4 +53,15 @@ export interface FacilitatorContact {
   location: string;
   bio: string;
   image: string;
+  kapenguriaImage?: string;
+}
+
+export interface CommunityGalleryItem {
+  id: string;
+  image: string;
+  title: string;
+  category: string;
+  caption: string;
+  location?: string;
+  featured?: boolean;
 }
