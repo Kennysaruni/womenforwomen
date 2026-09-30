@@ -21,7 +21,7 @@ import { CommunityGallery } from '../components/CommunityGallery';
 
 export const AboutPage: React.FC = () => {
   const [activeGoalIndex, setActiveGoalIndex] = useState(0);
-  const [facilitatorPhotoView, setFacilitatorPhotoView] = useState<'portrait' | 'kapenguria'>('portrait');
+  const [facilitatorPhotoView, setFacilitatorPhotoView] = useState<'portrait' | 'tororo' | 'kapenguria' | 'water'>('portrait');
   const activeGoal = ORGANIZATIONAL_GOALS[activeGoalIndex];
 
   return (
@@ -386,34 +386,55 @@ export const AboutPage: React.FC = () => {
               {/* Left Photo & Outreach Toggle */}
               <div className="lg:col-span-5 relative flex flex-col items-center justify-center bg-[#380E1B] p-6 sm:p-8 space-y-4">
                 {/* Switcher pills */}
-                <div className="flex items-center gap-1.5 p-1 bg-[#250812] border border-[#5A192E] z-10">
+                <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 bg-[#250812] border border-[#5A192E] z-10 w-full">
                   <button
                     onClick={() => setFacilitatorPhotoView('portrait')}
-                    className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
+                    className={`px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
                       facilitatorPhotoView === 'portrait'
                         ? 'bg-[#D81B60] text-white shadow'
                         : 'text-[#F3D5E2]/70 hover:text-white'
                     }`}
                   >
-                    Leadership Portrait
+                    Founder Portrait
+                  </button>
+                  <button
+                    onClick={() => setFacilitatorPhotoView('tororo')}
+                    className={`px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1 ${
+                      facilitatorPhotoView === 'tororo'
+                        ? 'bg-[#D81B60] text-white shadow'
+                        : 'text-[#F3D5E2]/70 hover:text-white'
+                    }`}
+                  >
+                    <MapPin className="w-3 h-3 text-[#E91E63]" />
+                    <span>Tororo Hospital</span>
                   </button>
                   <button
                     onClick={() => setFacilitatorPhotoView('kapenguria')}
-                    className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1 ${
+                    className={`px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1 ${
                       facilitatorPhotoView === 'kapenguria'
                         ? 'bg-[#D81B60] text-white shadow'
                         : 'text-[#F3D5E2]/70 hover:text-white'
                     }`}
                   >
-                    <MapPin className="w-3 h-3" />
+                    <MapPin className="w-3 h-3 text-[#E91E63]" />
                     <span>Kapenguria, Kenya</span>
+                  </button>
+                  <button
+                    onClick={() => setFacilitatorPhotoView('water')}
+                    className={`px-2.5 py-1 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
+                      facilitatorPhotoView === 'water'
+                        ? 'bg-[#D81B60] text-white shadow'
+                        : 'text-[#F3D5E2]/70 hover:text-white'
+                    }`}
+                  >
+                    Clean Water Well
                   </button>
                 </div>
 
                 <ScaleReveal delay={0.15} className="w-full max-w-sm">
                   <div className="relative w-full aspect-square overflow-hidden border border-[#D81B60]/40 shadow-xl bg-black">
                     <AnimatePresence mode="wait">
-                      {facilitatorPhotoView === 'portrait' ? (
+                      {facilitatorPhotoView === 'portrait' && (
                         <motion.img
                           key="portrait"
                           initial={{ opacity: 0 }}
@@ -424,7 +445,33 @@ export const AboutPage: React.FC = () => {
                           alt={FACILITATOR_INFO.name}
                           className="w-full h-full object-cover object-center"
                         />
-                      ) : (
+                      )}
+                      {facilitatorPhotoView === 'tororo' && (
+                        <motion.div
+                          key="tororo"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="relative w-full h-full"
+                        >
+                          <img
+                            src="/images/community/tororo-hospital-women-children-ward.jpg"
+                            alt="Visiting the women/Children ward Tororo General Hospital, Uganda 2026"
+                            className="w-full h-full object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/90 via-transparent to-transparent" />
+                          <div className="absolute bottom-3 left-3 right-3 text-white text-left">
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-[#F8EAF0] block">
+                              Global Healthcare Outreach
+                            </span>
+                            <span className="text-xs font-serif font-bold text-white">
+                              Tororo General Hospital, Uganda 2026
+                            </span>
+                          </div>
+                        </motion.div>
+                      )}
+                      {facilitatorPhotoView === 'kapenguria' && (
                         <motion.div
                           key="kapenguria"
                           initial={{ opacity: 0 }}
@@ -449,12 +496,38 @@ export const AboutPage: React.FC = () => {
                           </div>
                         </motion.div>
                       )}
+                      {facilitatorPhotoView === 'water' && (
+                        <motion.div
+                          key="water"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="relative w-full h-full"
+                        >
+                          <img
+                            src="/images/community/judith-water-well-borehole.jpg"
+                            alt="Judith Kerr pumping clean water at community borehole"
+                            className="w-full h-full object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/90 via-transparent to-transparent" />
+                          <div className="absolute bottom-3 left-3 right-3 text-white text-left">
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-[#F8EAF0] block">
+                              Community Infrastructure
+                            </span>
+                            <span className="text-xs font-serif font-bold text-white">
+                              Clean Water Borehole Initiative
+                            </span>
+                          </div>
+                        </motion.div>
+                      )}
                     </AnimatePresence>
                   </div>
                   <p className="text-[11px] text-[#F3D5E2]/80 mt-2 text-center">
-                    {facilitatorPhotoView === 'portrait'
-                      ? 'Judith Kerr — Founder & Group Facilitator'
-                      : 'Judith Kerr standing with community members in Kapenguria, Kenya'}
+                    {facilitatorPhotoView === 'portrait' && 'Judith Kerr — Founder & Group Facilitator'}
+                    {facilitatorPhotoView === 'tororo' && 'Visiting the women/Children ward Tororo General Hospital, Uganda 2026'}
+                    {facilitatorPhotoView === 'kapenguria' && 'Judith Kerr standing with community members in Kapenguria, Kenya'}
+                    {facilitatorPhotoView === 'water' && 'Judith Kerr pumping clean water with children at community borehole'}
                   </p>
                 </ScaleReveal>
               </div>

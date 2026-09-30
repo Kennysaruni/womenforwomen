@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, X, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 import { COMMUNITY_GALLERY } from '../data/content';
-import { FadeUp, StaggerContainer, StaggerItem, HoverLift } from './MotionReveal';
+import { FadeUp, HoverLift } from './MotionReveal';
 import type { CommunityGalleryItem } from '../types';
 
 interface CommunityGalleryProps {
@@ -81,90 +81,114 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${selectedCategory === cat
-                    ? 'bg-[#4A1525] text-white shadow'
-                    : 'bg-white text-[#5A192E] hover:bg-[#FAF4F7] border border-[#E7BDD1]'
-                    }`}
-                >
-                  {cat}
-                </button>
-              ))}
+              {categories.map((cat) => {
+                const count = cat === 'All'
+                  ? COMMUNITY_GALLERY.length
+                  : COMMUNITY_GALLERY.filter((i) => i.category === cat).length;
+                const isSelected = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer flex items-center gap-2 ${isSelected
+                      ? 'bg-[#4A1525] text-white shadow-md'
+                      : 'bg-white text-[#5A192E] hover:bg-[#FAF4F7] border border-[#E7BDD1]'
+                      }`}
+                  >
+                    <span>{cat}</span>
+                    <span
+                      className={`text-[10px] px-1.5 py-0.5 font-mono font-bold leading-none ${isSelected
+                        ? 'bg-[#D81B60] text-white'
+                        : 'bg-[#F8EAF0] text-[#5A192E]'
+                        }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </FadeUp>
       )}
 
-      {/* Gallery Grid */}
-      <StaggerContainer
-        staggerChildren={0.1}
+      {/* Gallery Grid with layout animations & AnimatePresence */}
+      <motion.div
+        layout
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {displayItems.map((item) => (
-          <StaggerItem key={item.id} className="h-full">
-            <HoverLift yOffset={-6} className="h-full">
-              <div
-                onClick={() => setActiveItem(item)}
-                className="group relative bg-white border border-[#E7BDD1] overflow-hidden hover:border-[#D81B60] transition-all duration-300 shadow-sm hover:shadow-xl cursor-pointer flex flex-col h-full text-left"
-              >
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#2E0B16]">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+        <AnimatePresence mode="popLayout">
+          {displayItems.map((item) => (
+            <motion.div
+              layout
+              key={item.id}
+              initial={{ opacity: 0, scale: 0.94, y: 16 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.94, y: 16 }}
+              transition={{ duration: 0.28, ease: 'easeOut' }}
+              className="h-full"
+            >
+              <HoverLift yOffset={-6} className="h-full">
+                <div
+                  onClick={() => setActiveItem(item)}
+                  className="group relative bg-white border border-[#E7BDD1] overflow-hidden hover:border-[#D81B60] transition-all duration-300 shadow-sm hover:shadow-xl cursor-pointer flex flex-col h-full text-left"
+                >
+                  {/* Image Container */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#2E0B16]">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span className="px-2.5 py-1 bg-[#4A1525]/90 backdrop-blur-sm text-white text-[10px] font-mono uppercase tracking-wider font-semibold">
-                      {item.category}
-                    </span>
-                    {item.location && (
-                      <span className="px-2 py-0.5 bg-white/90 backdrop-blur-sm text-[#4A1525] text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                        <MapPin className="w-3 h-3 text-[#D81B60]" />
-                        <span>{item.location}</span>
+                    {/* Top Badges */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                      <span className="px-2.5 py-1 bg-[#4A1525]/90 backdrop-blur-sm text-white text-[10px] font-mono uppercase tracking-wider font-semibold">
+                        {item.category}
                       </span>
+                      {item.location && (
+                        <span className="px-2 py-0.5 bg-white/90 backdrop-blur-sm text-[#4A1525] text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                          <MapPin className="w-3 h-3 text-[#D81B60]" />
+                          <span>{item.location}</span>
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Hover Quick Action */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#2E0B16]/30 backdrop-blur-[2px]">
+                      <div className="px-4 py-2 bg-white text-[#4A1525] text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-lg">
+                        <Eye className="w-3.5 h-3.5 text-[#D81B60]" />
+                        <span>View Full Image</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card Caption / Meta */}
+                  <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
+                    <div className="space-y-1.5">
+                      <h3 className="text-base font-serif font-bold text-[#4A1525] group-hover:text-[#D81B60] transition-colors leading-snug">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-[#575757] leading-relaxed line-clamp-3">
+                        {item.caption}
+                      </p>
+                    </div>
+
+                    {item.location === 'Kapenguria, Kenya' && (
+                      <div className="pt-2 border-t border-[#F8EAF0] flex items-center gap-1.5 text-[11px] font-medium text-[#D81B60]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D81B60] animate-pulse" />
+                        <span>Grassroots Global Outreach with Judith Kerr</span>
+                      </div>
                     )}
                   </div>
-
-                  {/* Hover Quick Action */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#2E0B16]/30 backdrop-blur-[2px]">
-                    <div className="px-4 py-2 bg-white text-[#4A1525] text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-lg">
-                      <Eye className="w-3.5 h-3.5 text-[#D81B60]" />
-                      <span>View Full Image</span>
-                    </div>
-                  </div>
                 </div>
-
-                {/* Card Caption / Meta */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
-                  <div className="space-y-1.5">
-                    <h3 className="text-base font-serif font-bold text-[#4A1525] group-hover:text-[#D81B60] transition-colors leading-snug">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-[#575757] leading-relaxed line-clamp-3">
-                      {item.caption}
-                    </p>
-                  </div>
-
-                  {item.location === 'Kapenguria, Kenya' && (
-                    <div className="pt-2 border-t border-[#F8EAF0] flex items-center gap-1.5 text-[11px] font-medium text-[#D81B60]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#D81B60] animate-pulse" />
-                      <span>Grassroots Global Outreach with Judith Kerr</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </HoverLift>
-          </StaggerItem>
-        ))}
-      </StaggerContainer>
+              </HoverLift>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
       {/* Lightbox Modal */}
       <AnimatePresence>

@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export const CAROUSEL_IMAGES = [
-  '/images/community/women-group-gathering.jpg',
-  '/images/community/community-workshop.jpg',
+  '/images/community/tororo-hospital-women-children-ward.jpg',
+  '/images/community/judith-water-well-borehole.jpg',
+  '/images/community/tororo-mission-assembly.jpg',
   '/images/judith-kapenguria-kenya.jpeg',
-  '/images/community/women-solidarity.jpg',
-  '/images/community/black-women-collaboration.jpg',
-  '/images/community/women-celebrating.jpg',
-  '/carousel/9cc7d6_25d74fcecbf562beae580501edee61f8.avif',
-  '/carousel/9cc7d6_ec3e584c1c209b4f838b8599ed8ed1c3.avif',
-  '/carousel/9cc7d6_dde8bfd59e3002c958eec6c6fde91087.avif',
+  '/images/community/tororo-hospital-relief-distribution.jpg',
+  '/images/community/community-fellowship-canopy.jpg',
+  '/images/community/women-fe-woman-school-youth.jpg',
+  '/images/community/community-leaders-delegation.jpg',
+  '/images/community/judith-traditional-regalia.jpg',
+  '/images/community/women-group-gathering.jpg',
 ];
 
 interface HeroBackgroundCarouselProps {

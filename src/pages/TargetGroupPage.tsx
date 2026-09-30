@@ -163,8 +163,8 @@ export const TargetGroupPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="relative border border-[#E7BDD1] overflow-hidden group shadow-md">
               <img
-                src="/images/community/women-celebrating.jpg"
-                alt="Women celebrating sisterhood and unity"
+                src="/images/community/community-fellowship-canopy.jpg"
+                alt="Women and mothers gathered in unity and fellowship under canopy"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent" />
@@ -180,17 +180,17 @@ export const TargetGroupPage: React.FC = () => {
 
             <div className="relative border border-[#E7BDD1] overflow-hidden group shadow-md">
               <img
-                src="/images/community/black-women-collaboration.jpg"
-                alt="Women entrepreneurs collaborating"
+                src="/images/community/judith-water-well-borehole.jpg"
+                alt="Judith Kerr and children at community borehole well"
                 className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2E0B16]/85 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white text-left">
                 <span className="text-[10px] uppercase tracking-widest text-[#F8EAF0] font-mono font-semibold block">
-                  Shared Purpose & Enterprise
+                  Practical Community Action
                 </span>
                 <p className="text-base font-serif font-bold text-white mt-1">
-                  Discovering strengths, skills, and collective self-reliance.
+                  Meeting essential daily needs and creating lasting family stability.
                 </p>
               </div>
             </div>
