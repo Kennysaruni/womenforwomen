@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Sparkles, Heart, Users, MapPin } from 'lucide-react';
+import { Play, Heart, Users, MapPin } from 'lucide-react';
 import { FadeUp, HoverLift } from './MotionReveal';
 
 interface VideoSpotlightProps {
