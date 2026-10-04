@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, X, ChevronLeft, ChevronRight, Eye } from 'lucide-react';
+import { MapPin, X, ChevronLeft, ChevronRight, Eye, Play } from 'lucide-react';
 import { COMMUNITY_GALLERY } from '../data/content';
 import { FadeUp, HoverLift } from './MotionReveal';
 import type { CommunityGalleryItem } from '../types';
@@ -156,11 +156,29 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({
                       )}
                     </div>
 
+                    {/* Video Center Badge */}
+                    {item.videoUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="w-12 h-12 rounded-full bg-[#D81B60]/95 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                          <Play className="w-5 h-5 fill-white ml-0.5" />
+                        </div>
+                      </div>
+                    )}
+
                     {/* Hover Quick Action */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-[#2E0B16]/30 backdrop-blur-[2px]">
                       <div className="px-4 py-2 bg-white text-[#4A1525] text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-lg">
-                        <Eye className="w-3.5 h-3.5 text-[#D81B60]" />
-                        <span>View Full Image</span>
+                        {item.videoUrl ? (
+                          <>
+                            <Play className="w-3.5 h-3.5 fill-[#D81B60] text-[#D81B60]" />
+                            <span>Play Video (0:53)</span>
+                          </>
+                        ) : (
+                          <>
+                            <Eye className="w-3.5 h-3.5 text-[#D81B60]" />
+                            <span>View Full Image</span>
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -211,19 +229,32 @@ export const CommunityGallery: React.FC<CommunityGalleryProps> = ({
               {/* Close Button */}
               <button
                 onClick={() => setActiveItem(null)}
-                aria-label="Close image modal"
+                aria-label="Close modal"
                 className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-[#D81B60] text-white flex items-center justify-center transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              {/* Main Image Frame */}
+              {/* Main Media Frame (Video Player or Static Photo) */}
               <div className="relative bg-[#1A060E] max-h-[65vh] flex items-center justify-center overflow-hidden">
-                <img
-                  src={activeItem.image}
-                  alt={activeItem.title}
-                  className="max-h-[65vh] w-auto max-w-full object-contain mx-auto"
-                />
+                {activeItem.videoUrl ? (
+                  <div className="w-full aspect-video bg-black max-h-[65vh] flex items-center justify-center">
+                    <iframe
+                      src={activeItem.videoUrl}
+                      title={activeItem.title}
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={activeItem.image}
+                    alt={activeItem.title}
+                    className="max-h-[65vh] w-auto max-w-full object-contain mx-auto"
+                  />
+                )}
 
                 {/* Left / Right Nav Buttons */}
                 {displayItems.length > 1 && (

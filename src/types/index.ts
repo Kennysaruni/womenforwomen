@@ -64,4 +64,5 @@ export interface CommunityGalleryItem {
   caption: string;
   location?: string;
   featured?: boolean;
+  videoUrl?: string;
 }

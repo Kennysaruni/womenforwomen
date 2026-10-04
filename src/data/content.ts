@@ -457,6 +457,16 @@ export const FAQ_ITEMS = [
 
 export const COMMUNITY_GALLERY: CommunityGalleryItem[] = [
   {
+    id: 'wfw-video-presentation',
+    image: '/images/community/vimeo-thumbnail.jpg',
+    title: '“We WFW Believe” Video Presentation',
+    category: 'Global Outreach & Relief',
+    caption: 'Official video presentation celebrating Women FE Woman (WFW) community missions, hospital relief, clean water projects, and sisterhood in motion.',
+    location: 'Tororo • Kapenguria • Toronto',
+    featured: true,
+    videoUrl: 'https://player.vimeo.com/video/1232537598?title=0&byline=0&portrait=0&color=d81b60&autoplay=1',
+  },
+  {
     id: 'tororo-hospital-ward',
     image: '/images/community/tororo-hospital-women-children-ward.jpg',
     title: 'Tororo General Hospital Visit',

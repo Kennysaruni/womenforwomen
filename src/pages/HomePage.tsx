@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react';
 import { CORE_PHILOSOPHY, PRIMARY_PILLARS, SERVICES_DATA, FACILITATOR_INFO } from '../data/content';
 import { FadeUp, StaggerContainer, StaggerItem, ScaleReveal, HoverLift } from '../components/MotionReveal';
 import { CommunityGallery } from '../components/CommunityGallery';
+import { VideoSpotlight } from '../components/VideoSpotlight';
 
 export const HomePage: React.FC = () => {
   return (
@@ -313,7 +314,10 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Community Moments & Sisterhood Gallery */}
+      {/* 5. Video Spotlight - “We WFW Believe” */}
+      <VideoSpotlight />
+
+      {/* 6. Community Moments & Sisterhood Gallery */}
       <section className="py-16 sm:py-24 bg-[#FAF4F7] border-y border-[#F3D5E2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CommunityGallery />
