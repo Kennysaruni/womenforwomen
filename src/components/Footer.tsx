@@ -11,14 +11,23 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 pb-8 sm:pb-12 border-b border-white/10">
           {/* Brand Col */}
           <div className="space-y-2.5 sm:space-y-4">
-            <div>
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">
-                Women <span className="text-[#D81B60]">FE</span> Woman
-              </span>
-              <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-[#F8EAF0]/70 font-sans block mt-0.5">
-                Founded by Judith Kerr
-              </span>
-            </div>
+            <Link to="/" className="group inline-flex items-center gap-2.5 sm:gap-3 focus:outline-none">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#D81B60]/80 shadow-md group-hover:border-[#E91E63] group-hover:scale-105 transition-all duration-300 shrink-0 bg-black flex items-center justify-center p-0.5">
+                <img
+                  src="/logo.jpeg"
+                  alt="Women FE Woman Logo"
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+              <div>
+                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white block">
+                  Women <span className="text-[#D81B60]">FE</span> Woman
+                </span>
+                <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] text-[#F8EAF0]/70 font-sans block mt-0.5">
+                  Founded by Judith Kerr
+                </span>
+              </div>
+            </Link>
             <p className="text-xs text-[#F3D5E2]/80 leading-relaxed max-w-sm">
               Empowering women and marginalized communities to recognize self-worth through collective energy, equity, and sustainable self-reliance.
             </p>

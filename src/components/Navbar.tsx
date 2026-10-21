@@ -49,14 +49,21 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo with Highlighted "FE" */}
         <Link
           to="/"
-          className="group flex items-center gap-2 focus:outline-none"
+          className="group flex items-center gap-2.5 sm:gap-3 focus:outline-none"
           aria-label="Women FE Woman - Home"
         >
+          <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#D81B60]/80 shadow-md group-hover:border-[#E91E63] group-hover:scale-105 transition-all duration-300 shrink-0 bg-black flex items-center justify-center p-0.5">
+            <img
+              src="/logo.jpeg"
+              alt="Women FE Woman Logo"
+              className="w-full h-full object-contain rounded-full"
+            />
+          </div>
           <div className="flex flex-col">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#F8EAF0] transition-colors">
+            <span className="font-serif text-lg sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#F8EAF0] transition-colors leading-tight">
               Women <span className="text-[#D81B60] group-hover:text-[#E91E63] transition-colors">FE</span> Woman
             </span>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#F3D5E2]/80 font-sans">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#F3D5E2]/80 font-sans">
               Founded by Judith Kerr
             </span>
           </div>
